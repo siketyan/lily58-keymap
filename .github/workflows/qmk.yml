@@ -23,3 +23,8 @@ jobs:
 
     - name: Compile
       run: ./bin/qmk compile -kb lily58 -km siketyan
+
+    - uses: actions/upload-artifact@v2
+      with:
+        name: lily58_rev1_siketyan.hex
+        path: ./.build/lily58_rev1_siketyan.hex
