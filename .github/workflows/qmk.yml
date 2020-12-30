@@ -11,6 +11,7 @@ jobs:
       uses: actions/checkout@v2
       with:
         repository: 'qmk/qmk_firmware'
+        submodules: true
 
     - name: Clone siketyan/lily58-keymap
       uses: actions/checkout@v2
