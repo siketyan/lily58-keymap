@@ -9,11 +9,13 @@ jobs:
     steps:
     - name: Clone qmk/qmk_firmware
       uses: actions/checkout@v2
-      repository: 'qmk/qmk_firmware'
+      with:
+        repository: 'qmk/qmk_firmware'
 
     - name: Clone siketyan/lily58-keymap
       uses: actions/checkout@v2
-      path: './keyboards/lily58/keymaps/siketyan'
+      with:
+        path: './keyboards/lily58/keymaps/siketyan'
 
     - name: Compile
       run: ./bin/qmk compile -kb lily58 -km siketyan
